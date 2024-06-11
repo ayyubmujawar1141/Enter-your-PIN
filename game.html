@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penelope Cruz</title>
+    <a href="coffe.html"></a>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image:url(C:\Users\user\Pictures\AngelinaJolie.jpg) ;
+            position: relative;
+            padding: 0%;
+            padding-bottom: 10%;
+            margin: 10%;
+            background: violet;
+        }
+        input[type="num"] {
+            width: 15px;
+            text-align: center;
+            background:30lh;
+            margin: 10px;
+            padding: 25px;
+            box-shadow:900px;
+            border-radius: 16px;
+            box-shadow: #fffcfc;
+            block-size: auto;
+            
+            
+            
+            lighting-color: black;
+            color:rgb(0, 0, 0);
+            
+            
+        }
+        #message {
+            margin-top: 20px;
+            font:bold;
+            
+        }
+        #letter1,#letter2,#letter3,#letter4{
+            font-size:x-large;
+            font-weight: bold;
+            text-shadow: darksalmon;
+            margin-bottom: 5%;
+            
+        }
+        #checkword{
+            box-sizing:1000px;
+            font-size: xx-large;
+            
+            cursor:pointer;
+            fill-opacity: calc(black);
+            color: #fffcfc;
+            font:bolder;
+            border-radius: 10pxS;
+            background-color:purple;
+        }
+        p{
+            color: cornflowerblue;
+            font-size: 20px;
+            font-weight: 200;
+            text-align: center;
+            font-family: fantasy;
+            
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>My Favourite Actress</h1>
+    <p>Enter the PIN:</p>
+    <input type="num" maxlength="1" id="letter1">
+    <input type="num" maxlength="1" id="letter2">
+    <input type="num" maxlength="1" id="letter3">
+    <input type="num" maxlength="1" id="letter4">
+    <br>
+    <button onclick="checkWord()" id="checkword">Submit</button>
+    <p id="message"></p>
+    <p id="coffe.html"></p>
+
+    <script>
+        const num = ["1141"];
+        const randomWord = num[Math.floor(Math.random() * num.length)];
+
+        function checkWord() {
+            const letter1 = document.getElementById("letter1").value;
+            const letter2 = document.getElementById("letter2").value;
+            const letter3 = document.getElementById("letter3").value;
+            const letter4 = document.getElementById("letter4").value;
+
+            const guessedWord = letter1 + letter2 + letter3 + letter4;
+
+            if (guessedWord.toLowerCase() === randomWord) {
+                document.getElementById("coffe.html").innerHTML = "Congratulations!";
+                window.location="https://penelope-cruz.org/"
+            } else {
+                document.getElementById("message").innerHTML = "Sorry, Incorrect PIN, Try again!";
+            }
+        }
+    </script>
+</body>
+</html>
